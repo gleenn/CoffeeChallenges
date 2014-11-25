@@ -1,0 +1,4 @@
+72 heads = dogs + humans
+200 legs = 4 * dogs + 2 * humans
+
+28 dogs
