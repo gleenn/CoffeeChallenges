@@ -1,0 +1,3 @@
+even numbers that are product of 3 numbers are a set of numbers that have at least one even number
+
+1/2 * 1/2 * 1/2 == 1/8
