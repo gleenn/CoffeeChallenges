@@ -1,17 +1,23 @@
+import java.util.List;
+import java.util.ListIterator;
+
 public class Layout {
 	private PerfectSquaresTable table;
-	public int[] nums;
+	public List<Integer> nums;
 
-    public Layout(PerfectSquaresTable table, int[] nums) {
+    public Layout(PerfectSquaresTable table, List<Integer> nums) {
 		this.table = table;
 		this.nums = nums;
     }
 
     protected int pairsThatArePerfectSquares() {
         int numAdjacentPerfectSquares = 0;
-        int sum;
-        for(int i=0; i<nums.length - 1; i++) {
-            if(table.isPerfectSquare(nums[i] + nums[i+1])) {
+		ListIterator<Integer> first = nums.listIterator();
+		ListIterator<Integer> second = nums.listIterator();
+		second.next();
+
+		while(second.hasNext()) {
+			if(table.isPerfectSquare(first.next() + second.next())) {
                 numAdjacentPerfectSquares++;
             }
         }
